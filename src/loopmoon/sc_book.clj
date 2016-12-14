@@ -179,3 +179,12 @@
                                 :delay-time [0.65 1.15]
                                 :decay-time 10)]
              (+ delay (pan2 source))))
+
+(do
+  (def delay-b (audio-bus 2))
+  (def mod-b (audio-bus 2))
+  (def gate-b (audio-bus 2))
+  (def k5-b (control-bus))
+
+  (defsynth control-syn [] (out:kr k5-b (lf-noise0:kr 4)))
+  )
